@@ -250,16 +250,20 @@ const generatePaymentLink = () => {
 		{},
 		{
 			validate() {
-				console.log('validation start')
+				console.log('hope debug validation start')
 				if (!billingDetails.source) {
+					console.log('validation error')
 					return __('Please let us know where you heard about us from.')
 				}
 				return validateAddress()
 			},
 			onSuccess(data) {
+				console.log('hope debug: on success')
 				window.location.href = data
+
 			},
 			onError(err) {
+				console.log('hope debug: on error')
 				showToast(__('Error'), err.messages?.[0] || err, 'x')
 			},
 		}
