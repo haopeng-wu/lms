@@ -18,10 +18,7 @@
 						)
 					}}
 				</p>
-				<Button v-if="user.data" @click="enrollStudent()" variant="solid">
-					{{ __('Start Learning') }}
-				</Button>
-				<Button v-else @click="redirectToLogin()">
+				<Button v-if="!user.data" @click="redirectToLogin()">
 					{{ __('Login') }}
 				</Button>
 			</div>
