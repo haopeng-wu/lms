@@ -6,5 +6,5 @@ cp -r /repos/payments/payments/payment_gateways/doctype/stripe_settings /home/fr
 cp -r /repos/payments/payments/payment_gateways/doctype/stripe_settings /home/frappe/frappe-bench/frappe-bench/apps/payments/payments/payment_gateways/doctype
 
 # copy over the payments.py file
-cp /repos/lms/lms/lms/payments.py /home/frappe/frappe-bench/apps/lms/lms/lms/payments.py
-cp /repos/lms/lms/lms/payments.py /home/frappe/frappe-bench/frappe-bench/apps/lms/lms/lms/payments.py
+cp -r /repos/lms/lms/lms /home/frappe/frappe-bench/apps/lms/lms
+cp -r /repos/lms/lms/lms /home/frappe/frappe-bench/frappe-bench/apps/lms/lms
