@@ -17,7 +17,7 @@ services:
     image: redis:alpine
 
   frappe:
-    image: frappe/bench:latest
+    image: frappe/bench:v5.22.9
     command: bash /workspace/init.sh
     # entrypoint: ["/workspace/entrypoint.sh"]
     environment:
