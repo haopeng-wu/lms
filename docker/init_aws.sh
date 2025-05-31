@@ -24,6 +24,8 @@ bench set-redis-socketio-host redis:6379
 sed -i '/redis/d' ./Procfile
 sed -i '/watch/d' ./Procfile
 
+git config --global --add safe.directory /repos/lms/.git
+git config --global --add safe.directory /repos/payments/.git
 bench get-app lms /repos/lms
 bench get-app payments /repos/payments
 
