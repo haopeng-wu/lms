@@ -1,5 +1,4 @@
 version: "3.7"
-name: lms
 services:
   mariadb:
     image: mariadb:10.8
@@ -19,9 +18,11 @@ services:
       - lms-network
 
   frappe:
-    build:
-      context: ../..
-      dockerfile: lms/docker/frappe.Dockerfile
+    image: 381491959099.dkr.ecr.eu-west-1.amazonaws.com/maple-repository:latest
+    deploy:
+      resources:
+        limits:
+          memory: 1G
     working_dir: /home/frappe
     command: bash /workspace/init_aws.sh
     ports:
