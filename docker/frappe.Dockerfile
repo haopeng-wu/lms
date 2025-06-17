@@ -1,5 +1,5 @@
 FROM frappe/bench:v5.22.9
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash
 COPY lms/docker /workspace
 COPY lms /repos/lms
 COPY payments /repos/payments
